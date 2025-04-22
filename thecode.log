@@ -1,0 +1,109 @@
+2025-04-22 20:29:05,627 - INFO - Gemini client initialized successfully.
+2025-04-22 20:29:05,627 - INFO - Script execution started.
+2025-04-22 20:29:05,627 - INFO - Configuration validated. Running async story step.
+2025-04-22 20:29:05,628 - DEBUG - Using selector: EpollSelector
+2025-04-22 20:29:05,629 - INFO - --- Running Story Step --- 
+2025-04-22 20:29:05,629 - INFO - State loaded from /home/bot-user/testbot/story_state.json: {'current_story': '', 'last_poll_message_id': None}
+2025-04-22 20:29:05,629 - INFO - Initializing Telegram bot...
+2025-04-22 20:29:05,629 - DEBUG - Set Bot API URL: https://api.telegram.org/bot8058100768:AAFpSm1gmmKdZallAnFG1UogRHaByY7JYe4
+2025-04-22 20:29:05,629 - DEBUG - Set Bot API File URL: https://api.telegram.org/file/bot8058100768:AAFpSm1gmmKdZallAnFG1UogRHaByY7JYe4
+2025-04-22 20:29:05,746 - INFO - No last poll ID found in state. Using INITIAL_STORY_IDEA.
+2025-04-22 20:29:05,747 - INFO - No existing story found. Posting initial idea.
+2025-04-22 20:29:05,747 - INFO - Sending initial story part to channel @testovidhe...
+2025-04-22 20:29:05,747 - DEBUG - Calling Bot API endpoint `sendMessage` with parameters `{'chat_id': '@testovidhe', 'text': '\nАльтернативная вселенная: Великая Отечественная война + киберпанк \nГлавный герой: Солдат красной армии.\n\nСолдата зовут Андрей, он и его отряд на пути к Берлину.\n\nБерлинский маршрут: Протокол 77-Б\nНочью на них напал дождь.\nНе обычный — асинхронный. Капли падали до того, как небо начинало хмуриться.\n"Погодная инверсия", — сказал Клим, просканировав фронт.\n— Немцы перехватили цикл времени, — добавил он. — Опять играются с фазами.\n\nМолчанов ткнул пальцем в небо.\nТам — силуэт дирижабля. Только у него не было корпуса. Один только каркас — светящийся, как нервная система.\n\nНейроаэростат. Платформа вещания.\nС него транслировали речь Гитлера, но… искажённую. Словно голос прошёл через тысячу фильтров и слипся в сплошной шёпот.\nОн бил прямо в кость.\n\n— Не слушайте, — сказал Андрей.\n\nВ голове зашевелилось.\n“Отступай”, — говорил внутренний голос.\n“Ты не победишь”.\n“Ты — не тот, кем был”.\nАндрей сжал кулак. На ладони — символ: маленькая пятиконечная звезда. Механическая. Пульсирующая.\n\nЭто был знак “функции возврата” — последняя возможность выйти из цикла.\n\n'}`
+2025-04-22 20:29:05,753 - DEBUG - connect_tcp.started host='api.telegram.org' port=443 local_address=None timeout=5.0 socket_options=None
+2025-04-22 20:29:05,842 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f9fed12e980>
+2025-04-22 20:29:05,843 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7f9fed0bfc40> server_hostname='api.telegram.org' timeout=5.0
+2025-04-22 20:29:05,877 - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f9fed12f400>
+2025-04-22 20:29:05,877 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-22 20:29:05,877 - DEBUG - send_request_headers.complete
+2025-04-22 20:29:05,878 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-22 20:29:05,878 - DEBUG - send_request_body.complete
+2025-04-22 20:29:05,878 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-22 20:29:05,950 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 22 Apr 2025 20:29:05 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'5654'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-04-22 20:29:05,951 - INFO - HTTP Request: POST https://api.telegram.org/bot8058100768:AAFpSm1gmmKdZallAnFG1UogRHaByY7JYe4/sendMessage "HTTP/1.1 200 OK"
+2025-04-22 20:29:05,951 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-22 20:29:05,951 - DEBUG - receive_response_body.complete
+2025-04-22 20:29:05,951 - DEBUG - response_closed.started
+2025-04-22 20:29:05,952 - DEBUG - response_closed.complete
+2025-04-22 20:29:05,952 - DEBUG - Call to Bot API endpoint `sendMessage` finished with return value `{'message_id': 65, 'sender_chat': {'id': -1002596194645, 'title': 'тестовище', 'username': 'testovidhe', 'type': 'channel'}, 'chat': {'id': -1002596194645, 'title': 'тестовище', 'username': 'testovidhe', 'type': 'channel'}, 'date': 1745353745, 'text': 'Альтернативная вселенная: Великая Отечественная война + киберпанк \nГлавный герой: Солдат красной армии.\n\nСолдата зовут Андрей, он и его отряд на пути к Берлину.\n\nБерлинский маршрут: Протокол 77-Б\nНочью на них напал дождь.\nНе обычный — асинхронный. Капли падали до того, как небо начинало хмуриться.\n"Погодная инверсия", — сказал Клим, просканировав фронт.\n— Немцы перехватили цикл времени, — добавил он. — Опять играются с фазами.\n\nМолчанов ткнул пальцем в небо.\nТам — силуэт дирижабля. Только у него не было корпуса. Один только каркас — светящийся, как нервная система.\n\nНейроаэростат. Платформа вещания.\nС него транслировали речь Гитлера, но… искажённую. Словно голос прошёл через тысячу фильтров и слипся в сплошной шёпот.\nОн бил прямо в кость.\n\n— Не слушайте, — сказал Андрей.\n\nВ голове зашевелилось.\n“Отступай”, — говорил внутренний голос.\n“Ты не победишь”.\n“Ты — не тот, кем был”.\nАндрей сжал кулак. На ладони — символ: маленькая пятиконечная звезда. Механическая. Пульсирующая.\n\nЭто был знак “функции возврата” — последняя возможность выйти из цикла.'}`
+2025-04-22 20:29:05,952 - INFO - Initial story part sent.
+2025-04-22 20:29:05,952 - INFO - Generating poll options based on current story...
+2025-04-22 20:29:05,952 - INFO - Generating poll options via Gemini...
+2025-04-22 20:29:06,258 - ERROR - Poll generation failed: 400 User location is not supported for the API use.
+2025-04-22 20:29:06,258 - INFO - Generated 4 poll options (truncated if needed). First option: 'Продолжить штурмовать позиции'...
+2025-04-22 20:29:06,258 - DEBUG - Calling Bot API endpoint `sendPoll` with parameters `{'chat_id': '@testovidhe', 'question': 'Как продолжится история?', 'options': [InputPollOption(text='Продолжить штурмовать позиции'), InputPollOption(text='Искать обходной путь'), InputPollOption(text='Запросить подкрепление'), InputPollOption(text='Перегруппироваться')], 'is_anonymous': True}`
+2025-04-22 20:29:06,259 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-22 20:29:06,260 - DEBUG - send_request_headers.complete
+2025-04-22 20:29:06,260 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-22 20:29:06,260 - DEBUG - send_request_body.complete
+2025-04-22 20:29:06,260 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-22 20:29:06,350 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 22 Apr 2025 20:29:06 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'1254'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-04-22 20:29:06,350 - INFO - HTTP Request: POST https://api.telegram.org/bot8058100768:AAFpSm1gmmKdZallAnFG1UogRHaByY7JYe4/sendPoll "HTTP/1.1 200 OK"
+2025-04-22 20:29:06,350 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-22 20:29:06,351 - DEBUG - receive_response_body.complete
+2025-04-22 20:29:06,351 - DEBUG - response_closed.started
+2025-04-22 20:29:06,351 - DEBUG - response_closed.complete
+2025-04-22 20:29:06,351 - DEBUG - Call to Bot API endpoint `sendPoll` finished with return value `{'message_id': 66, 'sender_chat': {'id': -1002596194645, 'title': 'тестовище', 'username': 'testovidhe', 'type': 'channel'}, 'chat': {'id': -1002596194645, 'title': 'тестовище', 'username': 'testovidhe', 'type': 'channel'}, 'date': 1745353746, 'poll': {'id': '5206476656063025625', 'question': 'Как продолжится история?', 'options': [{'text': 'Продолжить штурмовать позиции', 'voter_count': 0}, {'text': 'Искать обходной путь', 'voter_count': 0}, {'text': 'Запросить подкрепление', 'voter_count': 0}, {'text': 'Перегруппироваться', 'voter_count': 0}], 'total_voter_count': 0, 'is_closed': False, 'is_anonymous': True, 'type': 'regular', 'allows_multiple_answers': False}}`
+2025-04-22 20:29:06,351 - INFO - New poll sent (Message ID: 66).
+2025-04-22 20:29:06,352 - INFO - Story state saved to /home/bot-user/testbot/story_state.json: {'current_story': '\nАльтернативная вселенная: Великая Отечественная война + киберпанк \nГлавный герой: Солдат красной армии.\n\nСолдата зовут Андрей, он и его отряд на пути к Берлину.\n\nБерлинский маршрут: Протокол 77-Б\nНочью на них напал дождь.\nНе обычный — асинхронный. Капли падали до того, как небо начинало хмуриться.\n"Погодная инверсия", — сказал Клим, просканировав фронт.\n— Немцы перехватили цикл времени, — добавил он. — Опять играются с фазами.\n\nМолчанов ткнул пальцем в небо.\nТам — силуэт дирижабля. Только у него не было корпуса. Один только каркас — светящийся, как нервная система.\n\nНейроаэростат. Платформа вещания.\nС него транслировали речь Гитлера, но… искажённую. Словно голос прошёл через тысячу фильтров и слипся в сплошной шёпот.\nОн бил прямо в кость.\n\n— Не слушайте, — сказал Андрей.\n\nВ голове зашевелилось.\n“Отступай”, — говорил внутренний голос.\n“Ты не победишь”.\n“Ты — не тот, кем был”.\nАндрей сжал кулак. На ладони — символ: маленькая пятиконечная звезда. Механическая. Пульсирующая.\n\nЭто был знак “функции возврата” — последняя возможность выйти из цикла.\n\n', 'last_poll_message_id': 66}
+2025-04-22 20:29:06,352 - INFO - --- Story Step Completed Successfully --- 
+2025-04-22 20:29:06,352 - INFO - --- Story Step Finished --- 
+2025-04-22 20:29:06,354 - INFO - Script execution finished.
+2025-04-22 20:29:12,099 - INFO - Gemini client initialized successfully.
+2025-04-22 20:29:12,099 - INFO - Script execution started.
+2025-04-22 20:29:12,099 - INFO - Configuration validated. Running async story step.
+2025-04-22 20:29:12,100 - DEBUG - Using selector: EpollSelector
+2025-04-22 20:29:12,100 - INFO - --- Running Story Step --- 
+2025-04-22 20:29:12,100 - INFO - State loaded from /home/bot-user/testbot/story_state.json: {'current_story': '\nАльтернативная вселенная: Великая Отечественная война + киберпанк \nГлавный герой: Солдат красной армии.\n\nСолдата зовут Андрей, он и его отряд на пути к Берлину.\n\nБерлинский маршрут: Протокол 77-Б\nНочью на них напал дождь.\nНе обычный — асинхронный. Капли падали до того, как небо начинало хмуриться.\n"Погодная инверсия", — сказал Клим, просканировав фронт.\n— Немцы перехватили цикл времени, — добавил он. — Опять играются с фазами.\n\nМолчанов ткнул пальцем в небо.\nТам — силуэт дирижабля. Только у него не было корпуса. Один только каркас — светящийся, как нервная система.\n\nНейроаэростат. Платформа вещания.\nС него транслировали речь Гитлера, но… искажённую. Словно голос прошёл через тысячу фильтров и слипся в сплошной шёпот.\nОн бил прямо в кость.\n\n— Не слушайте, — сказал Андрей.\n\nВ голове зашевелилось.\n“Отступай”, — говорил внутренний голос.\n“Ты не победишь”.\n“Ты — не тот, кем был”.\nАндрей сжал кулак. На ладони — символ: маленькая пятиконечная звезда. Механическая. Пульсирующая.\n\nЭто был знак “функции возврата” — последняя возможность выйти из цикла.\n\n', 'last_poll_message_id': 66}
+2025-04-22 20:29:12,100 - INFO - Initializing Telegram bot...
+2025-04-22 20:29:12,101 - DEBUG - Set Bot API URL: https://api.telegram.org/bot8058100768:AAFpSm1gmmKdZallAnFG1UogRHaByY7JYe4
+2025-04-22 20:29:12,101 - DEBUG - Set Bot API File URL: https://api.telegram.org/file/bot8058100768:AAFpSm1gmmKdZallAnFG1UogRHaByY7JYe4
+2025-04-22 20:29:12,219 - INFO - Checking results for previous poll (ID: 66)
+2025-04-22 20:29:12,219 - INFO - Attempting to stop poll (Message ID: 66)...
+2025-04-22 20:29:12,219 - DEBUG - Calling Bot API endpoint `stopPoll` with parameters `{'chat_id': '@testovidhe', 'message_id': 66}`
+2025-04-22 20:29:12,225 - DEBUG - connect_tcp.started host='api.telegram.org' port=443 local_address=None timeout=5.0 socket_options=None
+2025-04-22 20:29:12,262 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f7c7b4a2920>
+2025-04-22 20:29:12,262 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x7f7c7b433c40> server_hostname='api.telegram.org' timeout=5.0
+2025-04-22 20:29:12,298 - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x7f7c7b4a33a0>
+2025-04-22 20:29:12,298 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-04-22 20:29:12,299 - DEBUG - send_request_headers.complete
+2025-04-22 20:29:12,299 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-04-22 20:29:12,299 - DEBUG - send_request_body.complete
+2025-04-22 20:29:12,299 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-04-22 20:29:12,352 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Server', b'nginx/1.18.0'), (b'Date', b'Tue, 22 Apr 2025 20:29:12 GMT'), (b'Content-Type', b'application/json'), (b'Content-Length', b'933'), (b'Connection', b'keep-alive'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'Access-Control-Allow-Origin', b'*'), (b'Access-Control-Allow-Methods', b'GET, POST, OPTIONS'), (b'Access-Control-Expose-Headers', b'Content-Length,Content-Type,Date,Server,Connection')])
+2025-04-22 20:29:12,353 - INFO - HTTP Request: POST https://api.telegram.org/bot8058100768:AAFpSm1gmmKdZallAnFG1UogRHaByY7JYe4/stopPoll "HTTP/1.1 200 OK"
+2025-04-22 20:29:12,353 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-04-22 20:29:12,354 - DEBUG - receive_response_body.complete
+2025-04-22 20:29:12,354 - DEBUG - response_closed.started
+2025-04-22 20:29:12,354 - DEBUG - response_closed.complete
+2025-04-22 20:29:12,354 - DEBUG - Call to Bot API endpoint `stopPoll` finished with return value `{'id': '5206476656063025625', 'question': 'Как продолжится история?', 'options': [{'text': 'Продолжить штурмовать позиции', 'voter_count': 0}, {'text': 'Искать обходной путь', 'voter_count': 0}, {'text': 'Запросить подкрепление', 'voter_count': 1}, {'text': 'Перегруппироваться', 'voter_count': 0}], 'total_voter_count': 1, 'is_closed': True, 'is_anonymous': True, 'type': 'regular', 'allows_multiple_answers': False}`
+2025-04-22 20:29:12,354 - INFO - Poll stopped (Message ID: 66).
+2025-04-22 20:29:12,355 - INFO - Poll winner determined: 'Запросить подкрепление' (1 votes)
+2025-04-22 20:29:12,355 - INFO - Generating story continuation based on: 'Запросить подкрепление'
+2025-04-22 20:29:12,355 - INFO - Generating story continuation via Gemini...
+2025-04-22 20:29:12,495 - ERROR - Gemini API error during story generation: 400 User location is not supported for the API use.
+Traceback (most recent call last):
+  File "/home/bot-user/testbot/telegram_poster_gm.py", line 219, in generate_story_continuation_gemini
+    response = gemini_model_text.generate_content(prompt)
+  File "/home/bot-user/.local/lib/python3.10/site-packages/google/generativeai/generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+  File "/home/bot-user/.local/lib/python3.10/site-packages/google/ai/generativelanguage_v1beta/services/generative_service/client.py", line 835, in generate_content
+    response = rpc(
+  File "/home/bot-user/.local/lib/python3.10/site-packages/google/api_core/gapic_v1/method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+  File "/home/bot-user/.local/lib/python3.10/site-packages/google/api_core/retry/retry_unary.py", line 293, in retry_wrapped_func
+    return retry_target(
+  File "/home/bot-user/.local/lib/python3.10/site-packages/google/api_core/retry/retry_unary.py", line 153, in retry_target
+    _retry_error_helper(
+  File "/home/bot-user/.local/lib/python3.10/site-packages/google/api_core/retry/retry_base.py", line 212, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/home/bot-user/.local/lib/python3.10/site-packages/google/api_core/retry/retry_unary.py", line 144, in retry_target
+    result = target()
+  File "/home/bot-user/.local/lib/python3.10/site-packages/google/api_core/timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+  File "/home/bot-user/.local/lib/python3.10/site-packages/google/api_core/grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.FailedPrecondition: 400 User location is not supported for the API use.
+2025-04-22 20:29:12,498 - ERROR - Story continuation failed or returned empty. Story not updated. Interrupting step.
+2025-04-22 20:29:12,498 - INFO - --- Story Step Finished --- 
