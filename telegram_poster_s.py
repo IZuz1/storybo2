@@ -513,4 +513,85 @@ async def run_story_step():
                          await bot.send_message(chat_id=CHANNEL_ID, text=new_story_part)
                          logging.info("Текст отправлен без изображения.")
                     current_story += new_story_part
-                except telegram.error.Teleg
+                except telegram.error.TelegramError as e:
+                    logging.error(f"Failed to send new story part: {e}", exc_info=True)
+                    raise
+            else:
+                logging.error("Story continuation failed or returned empty. Story not updated. Interrupting step.")
+                raise RuntimeError("LLM failed to generate story continuation.")
+
+        # 3. Generate and Post Poll
+        logging.info("Generating poll options based on current story...")
+        poll_options = generate_poll_options_openai(current_story) or [
+            "Продолжить штурмовать позиции",
+            "Искать обходной путь",
+            "Запросить подкрепление",
+            "Перегруппироваться"
+        ]
+
+        if not poll_options:
+            logging.warning("Using fallback poll options")
+            poll_options = ["Атаковать с фланга",
+                            "Укрепить оборону",
+                            "Провести разведку",
+                            "Изменить стратегию"]
+
+        if not poll_options or len(poll_options) != 4:
+            logging.error("Could not generate valid poll options. Skipping poll posting.")
+            new_poll_message_id = None
+        else:
+            truncated_options = [opt[:90] for opt in poll_options]
+            logging.info(f"Generated {len(truncated_options)} poll options (truncated if needed). First option: '{truncated_options[0]}'...")
+            try:
+                sent_poll_message: Message = await bot.send_poll(
+                    chat_id=CHANNEL_ID,
+                    question=POLL_QUESTION_TEMPLATE,
+                    options=truncated_options,
+                    is_anonymous=True,
+                )
+                new_poll_message_id = sent_poll_message.message_id
+                logging.info(f"New poll sent (Message ID: {new_poll_message_id}).")
+            except telegram.error.TelegramError as poll_error:
+                logging.error(f"Error sending poll: {poll_error}. Skipping poll posting.", exc_info=True)
+                new_poll_message_id = None
+
+        # 4. Save State
+        state_to_save = {
+            "current_story": current_story,
+            "last_poll_message_id": new_poll_message_id
+        }
+        save_state(state_to_save)
+        logging.info("--- Story Step Completed Successfully --- ")
+
+    except OpenAIError as e:
+        logging.error(f"\n--- An OpenAI API Error Occurred During Story Step --- ")
+        logging.error(f"Error message: {e}")
+        logging.error("Script interrupted due to OpenAI API error. State NOT saved for this run.")
+    except telegram.error.TelegramError as e:
+        logging.error(f"\n--- A Telegram API Error Occurred During Story Step --- ")
+        logging.error(f"Error message: {e}")
+        logging.error("Script interrupted due to Telegram API error. State NOT saved for this run.")
+    except RuntimeError as e:
+        logging.error(f"\n--- A Runtime Error Occurred During Story Step --- ")
+        logging.error(f"Error message: {e}")
+        logging.error("Script interrupted. State NOT saved for this run.")
+    except Exception as e:
+        logging.error(f"\n--- An Unexpected Error Occurred During Story Step --- ")
+        logging.error(f"Error message: {e}", exc_info=True)
+        logging.error("Script interrupted due to unexpected error. State NOT saved for this run.")
+    finally:
+        logging.info("--- Story Step Finished --- ")
+
+
+
+# --- Run the Script ---
+if __name__ == "__main__":
+    logging.info("Script execution started.")
+
+    if not validate_config():
+        logging.critical("Configuration validation failed. Please check BOT_TOKEN, CHANNEL_ID, and API keys. Exiting.")
+    else:
+        logging.info("Configuration validated. Running async story step.")
+        asyncio.run(run_story_step())
+
+    logging.info("Script execution finished.")
